@@ -1,50 +1,59 @@
 import React from 'react';
-import { Github, ExternalLink, GitBranch, GitFork, Star, FolderGit2, BookMarked, Terminal, Code2, Check } from 'lucide-react';
+import { Github, ExternalLink, GitBranch, BookMarked } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function GitHubSection() {
   const selectedRepos = [
     {
       name: "leetcode-solutions",
-      url: "https://github.com/prarthana08prarthu/leetcode-solutions",
+      url: personalInfo.leetcodeRepoUrl,
       description: "A GitHub repository documenting programming practice and problem-solving progress through coding problems.",
       languages: [
         { name: "C++", color: "#f34b7d" },
         { name: "Java", color: "#b07219" },
         { name: "Python", color: "#3572A5" }
       ],
-      stars: "Verified",
-      visibility: "Public"
+      visibility: "Public",
+      tag: "DSA Practice"
     },
     {
-      name: "c-line-editor",
-      url: personalInfo.githubUrl,
+      name: "hello-world",
+      url: personalInfo.helloWorldRepoUrl,
+      description: "Foundational Git and GitHub artifact repository used to practice version control workflow, initial commits, and remote push.",
+      languages: [
+        { name: "Markdown", color: "#083fa1" },
+        { name: "Git", color: "#f05032" }
+      ],
+      visibility: "Public",
+      tag: "Course Artifact"
+    },
+    {
+      name: "simple-line-editor",
+      url: personalInfo.lineEditorRepoUrl,
       description: "Command-line line editor developed in C that allows users to create, view, insert, delete, and modify text lines using line-based operations.",
       languages: [
-        { name: "C", color: "#555555" },
-        { name: "Makefile", color: "#427819" }
+        { name: "C", color: "#555555" }
       ],
-      stars: "Core CLI",
-      visibility: "Public"
+      visibility: "Public",
+      tag: "Systems Programming"
     },
     {
-      name: "personal-portfolio",
-      url: personalInfo.githubUrl,
-      description: "A responsive developer portfolio built using React, Vite, and Tailwind CSS to showcase projects, technical skills, and academic milestones.",
+      name: "portfolio",
+      url: personalInfo.portfolioRepoUrl,
+      description: "Responsive developer portfolio built using React, Vite, and Tailwind CSS to showcase course activities and programming projects.",
       languages: [
         { name: "JavaScript", color: "#f1e05a" },
         { name: "Tailwind CSS", color: "#38bdf8" },
         { name: "HTML", color: "#e34c26" }
       ],
-      stars: "Latest",
-      visibility: "Public"
+      visibility: "Public",
+      tag: "Portfolio Showcase"
     }
   ];
 
-  // Visual representation of week commit blocks (7 days x 20 weeks)
+  // Visual representation of week commit blocks (7 days x 22 weeks)
   const commitWeeks = Array.from({ length: 22 }, (_, colIdx) =>
     Array.from({ length: 7 }, (_, rowIdx) => {
-      // Create a realistic authentic activity pattern
       const val = (colIdx * 3 + rowIdx * 5 + 2) % 6;
       if (val === 0) return 0;
       if (val === 1 || val === 2) return 1;
@@ -100,7 +109,7 @@ export default function GitHubSection() {
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-                  Computer Science Undergrad • REVA University, Bangalore
+                  BTech Computer Science &amp; Engineering &bull; REVA University, Bangalore
                 </p>
               </div>
             </div>
@@ -145,7 +154,7 @@ export default function GitHubSection() {
                       <div
                         key={dIdx}
                         className={`w-3 h-3 rounded-sm transition-transform hover:scale-125 ${getHeatmapColor(level)}`}
-                        title={`Activity block`}
+                        title="Activity block"
                       />
                     ))}
                   </div>
@@ -167,11 +176,11 @@ export default function GitHubSection() {
               Selected Repositories
             </h3>
             <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
-              Public Repositories
+              Specific Repository Links
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {selectedRepos.map((repo, idx) => (
               <div
                 key={idx}
@@ -186,7 +195,7 @@ export default function GitHubSection() {
                         href={repo.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-base font-bold text-slate-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors truncate"
+                        className="text-sm font-bold text-slate-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors truncate"
                       >
                         {repo.name}
                       </a>
@@ -205,9 +214,9 @@ export default function GitHubSection() {
                 {/* Languages and Link */}
                 <div className="pt-4 border-t border-slate-200/80 dark:border-slate-700/80">
                   <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2.5">
                       {repo.languages.map((lang, lIdx) => (
-                        <div key={lIdx} className="flex items-center gap-1.5 text-xs text-slate-600 dark:text-slate-400">
+                        <div key={lIdx} className="flex items-center gap-1 text-[11px] text-slate-600 dark:text-slate-400">
                           <span
                             className="w-2 h-2 rounded-full"
                             style={{ backgroundColor: lang.color }}
@@ -221,10 +230,11 @@ export default function GitHubSection() {
                       href={repo.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 rounded-lg text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                      title="Open repository"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-teal-500/50 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                      title={`Open ${repo.name} repository`}
                     >
-                      <ExternalLink className="w-4 h-4" />
+                      <span>Open</span>
+                      <ExternalLink className="w-3 h-3 text-slate-400" />
                     </a>
                   </div>
                 </div>

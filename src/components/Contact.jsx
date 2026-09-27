@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Github, Linkedin, MapPin, Send, CheckCircle2, Copy, Check, Sparkles } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, Send, CheckCircle2, Copy, Check, Info } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Contact() {
@@ -33,7 +33,7 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Interested in discussing potential software internships, hackathon collaborations, or technical projects? Feel free to reach out.
+            Feel free to connect for academic discussions, coding collaborations, or technical queries.
           </p>
         </div>
 
@@ -51,9 +51,14 @@ export default function Contact() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block">
-                    Email Address
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                      Email Address
+                    </span>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200/70 dark:border-amber-800/70">
+                      Placeholder
+                    </span>
+                  </div>
                   <div className="flex items-center gap-2 mt-0.5">
                     <span className="text-sm font-semibold text-slate-900 dark:text-white font-mono truncate">
                       {personalInfo.email}
@@ -67,7 +72,7 @@ export default function Contact() {
                     </button>
                   </div>
                   <span className="text-[11px] text-slate-400 dark:text-slate-500 block mt-0.5">
-                    Academic email placeholder
+                    Replace with your verified email in portfolioData.js
                   </span>
                 </div>
               </div>
@@ -78,9 +83,14 @@ export default function Contact() {
                   <Github className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block">
-                    GitHub Profile
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                      GitHub Profile
+                    </span>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200/70 dark:border-emerald-800/70">
+                      Verified
+                    </span>
+                  </div>
                   <a
                     href={personalInfo.githubUrl}
                     target="_blank"
@@ -90,7 +100,7 @@ export default function Contact() {
                     github.com/{personalInfo.githubUsername}
                   </a>
                   <span className="text-[11px] text-slate-400 dark:text-slate-500 block mt-0.5">
-                    Primary coding &amp; project repository
+                    Primary coding &amp; coursework repositories
                   </span>
                 </div>
               </div>
@@ -101,19 +111,24 @@ export default function Contact() {
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block">
-                    LinkedIn Network
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                      LinkedIn Network
+                    </span>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200/70 dark:border-amber-800/70">
+                      Placeholder
+                    </span>
+                  </div>
                   <a
                     href={personalInfo.linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 block mt-0.5 truncate"
                   >
-                    linkedin.com/in/prarthana-hs
+                    {personalInfo.linkedinUrl}
                   </a>
                   <span className="text-[11px] text-slate-400 dark:text-slate-500 block mt-0.5">
-                    Professional networking profile placeholder
+                    Replace with your verified LinkedIn URL in portfolioData.js
                   </span>
                 </div>
               </div>
@@ -137,9 +152,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
-              <span>Available for 2024–2025 student hackathons, coding workshops, and summer internship inquiries.</span>
+            <div className="p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 text-xs text-slate-600 dark:text-slate-400 flex items-center gap-2.5">
+              <Info className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+              <span>Open for academic peer learning, technical coursework discussions, and student collaboration.</span>
             </div>
           </div>
 
@@ -149,7 +164,7 @@ export default function Contact() {
               Send a Message
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">
-              Have an internship query or project opportunity? Leave your note below.
+              Leave your note, inquiry, or collaborative message below.
             </p>
 
             {submitted ? (
@@ -161,7 +176,7 @@ export default function Contact() {
                   Message Prepared Successfully
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
-                  Thank you for reaching out, <strong>{formData.name}</strong>! In this client-side demonstration, you can also connect directly via email at <span className="font-mono text-teal-600 dark:text-teal-400 font-semibold">{personalInfo.email}</span>.
+                  Thank you for reaching out, <strong>{formData.name}</strong>! This client-side form interface is designed for demonstration as part of the portfolio course submission.
                 </p>
                 <button
                   onClick={() => {
@@ -185,7 +200,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. John Doe / Recruiter Name"
+                    placeholder="e.g. John Doe / Peer Student"
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder:text-slate-400"
                   />
                 </div>
@@ -200,7 +215,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="e.g. recruiter@company.com"
+                    placeholder="e.g. student@reva.edu.in"
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder:text-slate-400"
                   />
                 </div>
@@ -215,7 +230,7 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Write your note, feedback, or opportunity details here..."
+                    placeholder="Write your note, feedback, or collaborative inquiry here..."
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder:text-slate-400 resize-none"
                   />
                 </div>

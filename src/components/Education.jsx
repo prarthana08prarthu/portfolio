@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Calendar, MapPin, BookOpenCheck, Award, Layers } from 'lucide-react';
+import { GraduationCap, MapPin, BookOpenCheck, Layers } from 'lucide-react';
 import { educationData } from '../data/portfolioData';
 
 export default function Education() {
@@ -46,18 +46,14 @@ export default function Education() {
                 <div className="text-base font-bold text-slate-900 dark:text-white">
                   {educationData.degree}
                 </div>
-                <div className="flex flex-wrap gap-y-2 gap-x-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <div className="flex flex-wrap gap-y-2 gap-x-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-1.5 font-medium text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/60 px-2.5 py-1 rounded-md border border-teal-200/70 dark:border-teal-800/60">
                     <Layers className="w-3.5 h-3.5" />
                     <span>{educationData.currentSemester}</span>
                   </div>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                    <span>{educationData.expectedGraduation}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                     <MapPin className="w-3.5 h-3.5 text-slate-500" />
-                    <span>Bangalore, Karnataka</span>
+                    <span>{educationData.location}</span>
                   </div>
                 </div>
               </div>

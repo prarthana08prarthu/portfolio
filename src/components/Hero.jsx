@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowDown, Github, Mail, FolderGit2, Terminal, Sparkles, Copy, Check, ExternalLink } from 'lucide-react';
+import { ArrowDown, Github, Mail, FolderGit2, Terminal, Copy, Check, ExternalLink } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Hero() {
@@ -18,7 +18,7 @@ export default function Hero() {
     "DBMS & Relational Modeling"
   ],
   passion: "Building practical software & clean code",
-  status: "Open to Internships, Hackathons & Collaborations"
+  status: "Academic Coursework & Technical Projects"
 };`;
 
   const copyCode = () => {
@@ -28,7 +28,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+    <section id="hero" className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-teal-500/10 dark:bg-teal-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
@@ -72,7 +72,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-medium">Location</p>
-                <p className="text-sm font-semibold text-slate-900 dark:text-white mt-0.5">Bangalore, IN</p>
+                <p className="text-sm font-semibold text-slate-900 dark:text-white mt-0.5">Bangalore, India</p>
               </div>
             </div>
 
@@ -168,8 +168,8 @@ export default function Hero() {
                   </p>
                   <p className="pl-4">],</p>
                   <p className="pl-4">
-                    <span className="text-slate-400">aspiringGoal:</span>{' '}
-                    <span className="text-emerald-400">"Software Engineering Internships"</span>
+                    <span className="text-slate-400">academicFocus:</span>{' '}
+                    <span className="text-emerald-400">"Core Computer Science Foundations"</span>
                   </p>
                   <p>&#125;;</p>
 

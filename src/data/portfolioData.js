@@ -2,74 +2,83 @@ export const personalInfo = {
   name: "Prarthana HS",
   role: "Computer Science Engineering Student & Aspiring Software Developer",
   university: "REVA University, Bangalore",
-  program: "BTech – Computer Science and Engineering",
+  program: "BTech Computer Science and Engineering",
   semester: "3rd Semester",
-  location: "Bangalore, India",
+  location: "Bangalore, Karnataka, India",
   tagline: "Passionate about building practical software projects, solving programming problems, learning new technologies, and developing strong foundations in software engineering.",
   githubUsername: "prarthana08prarthu",
   githubUrl: "https://github.com/prarthana08prarthu",
-  linkedinUrl: "https://linkedin.com/in/prarthana-hs", // Placeholder for actual profile
-  email: "prarthana.cse.student@reva.edu.in", // Placeholder for direct contact
+
+  // Specific repository URLs
+  helloWorldRepoUrl: "https://github.com/prarthana08prarthu/hello-world", // [Placeholder: Replace with your actual Hello World repository URL if different]
+  leetcodeRepoUrl: "https://github.com/prarthana08prarthu/leetcode-solutions",
+  lineEditorRepoUrl: "https://github.com/prarthana08prarthu/simple-line-editor", // [Placeholder: Replace with your actual Line Editor repository URL if different]
+  portfolioRepoUrl: "https://github.com/prarthana08prarthu/portfolio", // [Placeholder: Replace with your actual portfolio repository URL if different]
+
+  // Contact details clearly labeled for submission rubric
+  email: "[Placeholder: your.email@reva.edu.in]", // [Placeholder - Replace with your actual contact email]
+  isEmailPlaceholder: true,
+  linkedinUrl: "https://linkedin.com/in/[your-linkedin-id]", // [Placeholder - Replace with your actual LinkedIn profile]
+  isLinkedinPlaceholder: true,
 };
 
 export const educationData = {
   institution: "REVA University, Bangalore",
   degree: "BTech in Computer Science and Engineering",
   currentSemester: "3rd Semester",
-  expectedGraduation: "Expected: 2027",
+  location: "Bangalore, Karnataka, India",
   coursework: [
     "Data Structures & Algorithms",
     "Object-Oriented Programming (Java / C++)",
     "Database Management Systems (DBMS)",
     "Computer Organization & Architecture",
     "Discrete Mathematical Structures",
-    "Operating Systems Fundamentals",
-    "Design & Analysis of Algorithms"
+    "Operating Systems Fundamentals"
   ],
-  academicFocus: "Building solid core foundations in algorithmic problem solving, software system architecture, database design, and collaborative development."
+  academicFocus: "Developing core academic foundations in computational logic, data structures, relational databases, and collaborative software development."
 };
 
 export const skillsData = [
   {
     category: "Programming Languages",
-    description: "Core languages used for coursework, algorithmic problem-solving, and system programming.",
+    description: "Core languages studied and practiced for coursework and problem-solving.",
     skills: [
       { name: "C", focus: "Pointers, memory management, file I/O & command-line tools" },
       { name: "C++", focus: "Standard Template Library (STL) & algorithm implementation" },
       { name: "Java", focus: "Object-Oriented Programming principles, classes & inheritance" },
-      { name: "Python", focus: "Scripting, rapid problem solving & algorithmic logic" }
+      { name: "Python", focus: "Basic scripting, problem solving & algorithmic logic" }
     ]
   },
   {
     category: "Web Development",
-    description: "Modern frontend technologies used to build responsive, accessible web applications.",
+    description: "Frontend technologies practiced for responsive web applications.",
     skills: [
       { name: "HTML5", focus: "Semantic markup & web accessibility standards" },
       { name: "CSS3", focus: "Responsive layout design, Flexbox & Grid systems" },
       { name: "JavaScript", focus: "ES6+ syntax, asynchronous programming & DOM APIs" },
-      { name: "React", focus: "Component architecture, hooks, state management & props" },
-      { name: "Vite", focus: "Modern frontend tooling, fast HMR & optimized bundling" },
-      { name: "Tailwind CSS", focus: "Utility-first design, dark mode & responsive UI systems" }
+      { name: "React", focus: "Component architecture, hooks & state management" },
+      { name: "Vite", focus: "Modern frontend tooling & fast bundling" },
+      { name: "Tailwind CSS", focus: "Utility-first design & responsive UI styling" }
     ]
   },
   {
     category: "Databases & Data Management",
-    description: "Relational database concepts, schema design, and SQL querying.",
+    description: "Relational database concepts and SQL fundamentals.",
     skills: [
-      { name: "MySQL", focus: "Relational schema design, SQL queries, joins & constraints" },
+      { name: "MySQL", focus: "Relational schema design, SQL queries & constraints" },
       { name: "DBMS", focus: "Normalization, ACID properties, transactions & ER modeling" }
     ]
   },
   {
     category: "Developer Tools & Workflow",
-    description: "Essential toolchain for version control, collaboration, and modern software engineering.",
+    description: "Essential toolchain used for version control, collaboration, and code editing.",
     skills: [
-      { name: "Git", focus: "Branching, committing, merge conflicts & workflow hygiene" },
-      { name: "GitHub", focus: "Remote repositories, PRs, issue tracking & code hosting" },
-      { name: "GitHub CLI", focus: "Command-line repo management, clones & PR workflows" },
-      { name: "VS Code", focus: "Primary IDE, workspace setup & extensions ecosystem" },
-      { name: "GitLens", focus: "Code authorship inspection, git blame & commit history" },
-      { name: "Live Share", focus: "Real-time collaborative pair programming & debugging" }
+      { name: "Git", focus: "Branching, committing & workflow hygiene" },
+      { name: "GitHub", focus: "Remote repositories, commits & code hosting" },
+      { name: "GitHub CLI", focus: "Command-line repository and authentication workflow" },
+      { name: "VS Code", focus: "Primary IDE & developer extensions ecosystem" },
+      { name: "GitLens", focus: "Code authorship inspection & commit history in editor" },
+      { name: "Live Share", focus: "Real-time collaborative pair programming in VS Code" }
     ]
   }
 ];
@@ -78,168 +87,152 @@ export const projectsData = [
   {
     id: "line-editor-c",
     title: "Simple Line Editor in C",
-    subtitle: "Command-Line Text Manipulation System",
+    subtitle: "Command-Line Line-Based Text Editor",
     description: "A command-line line editor developed in C that allows users to create, view, insert, delete, and modify text lines using line-based operations.",
     details: [
-      "Implemented dynamic line management using low-level pointers and structured memory allocation.",
-      "Engineered command parsing for line-based operations: insert, delete, update, and display.",
-      "Applied structured file handling routines in C to load and save edited buffers to disk."
+      "Line-based text operations: inserting lines, deleting lines, displaying buffer contents, and modifying lines.",
+      "Dynamic memory and pointer management in C for line representation.",
+      "File handling routines to load text files and save edited text back to disk."
     ],
-    technologies: ["C", "Command Line", "Data Structures", "File Handling", "Pointers"],
-    githubUrl: "https://github.com/prarthana08prarthu",
-    githubLabel: "View on GitHub",
-    featured: true,
+    technologies: ["C", "Command Line", "File I/O", "Pointers"],
+    githubUrl: personalInfo.lineEditorRepoUrl,
+    githubLabel: "View Repository",
+    isPlaceholderUrl: true,
     type: "Systems / CLI Project"
   },
   {
     id: "leetcode-solutions",
     title: "LeetCode Practice & Solutions",
-    subtitle: "Algorithmic Problem Solving Repository",
+    subtitle: "Programming Practice & Problem Solving",
     description: "A GitHub repository documenting programming practice and problem-solving progress through coding problems.",
     details: [
-      "Structured problem solutions classified by topics: Arrays, Strings, Two Pointers, and Linked Lists.",
-      "Focus on time and space complexity analysis (Big-O optimization) across multiple attempts.",
-      "Clean, documented code with explanatory logic and edge case test handling."
+      "Practice solutions organized by problem-solving topics.",
+      "Written primarily using C++, Java, and Python.",
+      "Focus on practicing fundamental data structures and algorithmic thinking."
     ],
-    technologies: ["C++", "Java", "Python", "Data Structures", "Algorithms", "Problem Solving"],
+    technologies: ["C++", "Java", "Python", "Problem Solving", "Data Structures"],
     githubUrl: "https://github.com/prarthana08prarthu/leetcode-solutions",
-    githubLabel: "View Repository",
-    featured: true,
-    type: "Competitive Programming & DSA"
+    githubLabel: "View LeetCode Repository",
+    isPlaceholderUrl: false,
+    type: "Algorithms & DSA"
+  },
+  {
+    id: "hello-world",
+    title: "Hello World Repository",
+    subtitle: "Foundational Git & GitHub Artifact",
+    description: "An introductory repository used to establish Git version control workflow, initial commit practices, and GitHub profile setup.",
+    details: [
+      "Initial setup of Git repository and remote repository connection.",
+      "Practiced basic Git commands: git init, add, commit, and push.",
+      "Demonstrates foundational repository hygiene and documentation."
+    ],
+    technologies: ["Git", "GitHub", "Markdown"],
+    githubUrl: personalInfo.helloWorldRepoUrl,
+    githubLabel: "View Hello World Repository",
+    isPlaceholderUrl: true,
+    type: "Course Artifact"
   },
   {
     id: "portfolio-website",
     title: "Personal Developer Portfolio",
-    subtitle: "Modern Component-Driven Web Showcase",
+    subtitle: "React & Tailwind CSS Course Showcase",
     description: "A responsive developer portfolio built using React, Vite, and Tailwind CSS to showcase projects, technical skills, learning progress, and GitHub work.",
     details: [
-      "Engineered with modular React component architecture and state-managed light/dark themes.",
-      "Styled with Tailwind CSS for mobile-first responsiveness, typography hierarchy, and accessible contrast.",
-      "Includes structured sections for academic milestones, live GitHub integration, and contact workflows."
+      "Structured using modular, reusable React components.",
+      "Responsive design styled with Tailwind CSS.",
+      "Includes dark/light mode toggle and authentic student documentation."
     ],
-    technologies: ["React", "Vite", "Tailwind CSS", "JavaScript", "Responsive Design"],
-    githubUrl: "https://github.com/prarthana08prarthu",
-    githubLabel: "Source Code",
-    liveUrl: "#",
-    liveLabel: "Live Preview",
-    featured: true,
-    type: "Frontend Engineering"
+    technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+    githubUrl: personalInfo.portfolioRepoUrl,
+    githubLabel: "View Portfolio Code",
+    isPlaceholderUrl: true,
+    type: "Web Development"
   }
 ];
 
 export const activitiesData = [
   {
-    title: "Programming Artifact – C/C++",
-    category: "Systems & Low-Level Code",
-    description: "Developed structured programs and CLI artifacts in C and C++, focusing on memory allocation, pointer manipulation, and foundational algorithms.",
-    skillsLearned: ["Memory Management", "Pointers", "File I/O", "CLI Design"],
-    evidenceText: "Verified C projects and CLI implementation",
-    evidenceLink: "https://github.com/prarthana08prarthu"
+    activityNumber: "Activity 1",
+    title: "Programming Artifact / C-C++ Work",
+    category: "Course Activity 1",
+    description: "Developed foundational programming artifacts in C and C++, focusing on line editor implementation, pointers, memory allocation, and command-line operations.",
+    skillsLearned: ["C / C++ Basics", "Pointers", "Memory Allocation", "Command-Line File I/O"],
+    evidenceText: "View Line Editor Project",
+    evidenceLink: "#projects"
   },
   {
-    title: "Git & GitHub Workflow Mastery",
-    category: "Version Control",
-    description: "Established daily version control discipline: commit hygiene, meaningful messages, branch workflows, and remote repository synchronization.",
-    skillsLearned: ["Git CLI", "Branching", "Merge Resolution", "Repo Management"],
-    evidenceText: "GitHub Profile @prarthana08prarthu",
-    evidenceLink: "https://github.com/prarthana08prarthu"
+    activityNumber: "Activity 2",
+    title: "Git & GitHub Setup and Version Control",
+    category: "Course Activity 2",
+    description: "Configured Git and GitHub workflow, created foundational repositories including the Hello World repository, and practiced regular commits and repository management.",
+    skillsLearned: ["Git CLI", "Repository Management", "Commit Practices", "GitHub Setup"],
+    evidenceText: "View Hello World Repository",
+    evidenceLink: personalInfo.helloWorldRepoUrl,
+    isExternal: true
   },
   {
+    activityNumber: "Activity 3",
     title: "GitLens & Live Share Collaboration",
-    category: "Developer Tooling",
-    description: "Leveraged advanced VS Code extensions for collaborative pair programming, real-time debugging, and deep inspection of Git history and blame annotations.",
-    skillsLearned: ["Pair Programming", "Real-Time Debugging", "Code Inspection", "VS Code Tooling"],
-    evidenceText: "Team collaboration practices"
+    category: "Course Activity 3",
+    description: "Utilized VS Code extensions including GitLens for exploring commit history and authorship, and Live Share for collaborative pair programming and real-time code review.",
+    skillsLearned: ["GitLens Inspection", "Live Share Collaboration", "Pair Programming", "VS Code Workflow"],
+    evidenceText: "VS Code Tooling & Peer Review Practice",
+    evidenceLink: null
   },
   {
-    title: "LeetCode Practice & Problem Solving",
-    category: "Algorithms & DSA",
-    description: "Consistent problem solving on LeetCode to build strong algorithmic intuition in arrays, strings, recursion, and search techniques.",
-    skillsLearned: ["Algorithmic Intuition", "Time Complexity", "Space Complexity", "Edge Case Analysis"],
-    evidenceText: "leetcode-solutions Repository",
-    evidenceLink: "https://github.com/prarthana08prarthu/leetcode-solutions"
-  },
-  {
-    title: "Coding Profile Development",
-    category: "Professional Presentation",
-    description: "Cultivated a clean, transparent online developer presence with organized repositories, structured READMEs, and authentic technical documentation.",
-    skillsLearned: ["Technical Documentation", "README Crafting", "Open Source Hygiene"],
-    evidenceText: "github.com/prarthana08prarthu",
-    evidenceLink: "https://github.com/prarthana08prarthu"
-  },
-  {
-    title: "Hackathon Preparation",
-    category: "Innovation & Problem Solving",
-    description: "Collaborated on problem statements, ideated real-world software solutions, and practiced rapid architecture planning for competitive hackathons.",
-    skillsLearned: ["Problem Analysis", "Rapid Prototyping", "Team Brainstorming", "Pitch Structuring"],
-    evidenceText: "Hackathon Track & Solutions Planning"
-  },
-  {
-    title: "Technical Portfolio Development",
-    category: "Frontend Engineering",
-    description: "Designed and implemented a production-grade developer portfolio in React, practicing clean component separation, Tailwind styling, and accessibility.",
-    skillsLearned: ["React Architecture", "Tailwind CSS", "Responsive Design", "Accessibility"],
-    evidenceText: "Portfolio codebase on GitHub",
-    evidenceLink: "https://github.com/prarthana08prarthu"
+    activityNumber: "Activity 4",
+    title: "LeetCode Practice & Portfolio Integration",
+    category: "Course Activity 4",
+    description: "Consistent problem solving on LeetCode documented through a dedicated GitHub repository, and integrated into this personal portfolio for course evaluation.",
+    skillsLearned: ["Problem Solving", "Algorithmic Practice", "GitHub Repository Integration", "Portfolio Documentation"],
+    evidenceText: "View LeetCode Repository",
+    evidenceLink: "https://github.com/prarthana08prarthu/leetcode-solutions",
+    isExternal: true
   }
 ];
 
 export const learningJourney = [
   {
     stage: "Core Foundation",
-    title: "C & C++ Systems Programming",
-    status: "Active Practice",
-    statusColor: "emerald",
-    description: "Deepening understanding of memory pointers, structs, command-line arguments, and algorithmic logic.",
-    topics: ["Pointer Arithmetic", "Dynamic Memory Allocation", "Standard Template Library (STL)", "File Handling"]
+    title: "C & C++ Programming",
+    status: "Active Study",
+    description: "Understanding pointers, structs, command-line arguments, and algorithmic logic.",
+    topics: ["Pointers & Memory", "Standard Template Library (STL)", "File Handling", "Algorithm Implementation"]
   },
   {
     stage: "Algorithmic Growth",
     title: "Data Structures & Algorithms",
-    status: "Active Focus",
-    statusColor: "teal",
-    description: "Practicing data structures and computational complexity through LeetCode and academic coursework.",
-    topics: ["Arrays & Linked Lists", "Stacks & Queues", "Trees & Graphs", "Sorting & Searching Algorithms"]
+    status: "Active Practice",
+    description: "Practicing data structures and computational complexity through LeetCode practice and academic coursework.",
+    topics: ["Arrays & Linked Lists", "Stacks & Queues", "Trees & Graphs", "Sorting & Searching"]
   },
   {
     stage: "Data Systems",
     title: "Database Management Systems (DBMS)",
-    status: "In Progress",
-    statusColor: "blue",
+    status: "Semester Coursework",
     description: "Studying relational data modeling, relational algebra, SQL querying, normalization, and ACID properties.",
-    topics: ["SQL Queries & Joins", "ER Modeling", "Normalization (1NF-BCNF)", "Transaction Management"]
+    topics: ["SQL Queries & Joins", "ER Modeling", "Normalization", "Transaction Management"]
   },
   {
     stage: "Object-Oriented Design",
     title: "Java OOP",
-    status: "Core Semester Study",
-    statusColor: "indigo",
-    description: "Mastering object-oriented paradigms, class hierarchies, interfaces, and exception handling in Java.",
-    topics: ["Encapsulation & Inheritance", "Polymorphism & Abstraction", "Java Collections Framework", "Exception Handling"]
+    status: "Semester Coursework",
+    description: "Studying object-oriented paradigms, classes, inheritance, interfaces, and exception handling in Java.",
+    topics: ["Encapsulation & Inheritance", "Polymorphism & Abstraction", "Java Collections", "Exception Handling"]
   },
   {
-    stage: "Versatility & Scripting",
+    stage: "Scripting & Fundamentals",
     title: "Python Programming",
-    status: "Continuous Learning",
-    statusColor: "amber",
-    description: "Building Python proficiency for rapid scripting, data manipulation, and algorithmic prototyping.",
-    topics: ["Python Data Structures", "Comprehensions & Modules", "File Operations", "Script Automation"]
+    status: "Learning & Practice",
+    description: "Building Python proficiency for rapid scripting and algorithmic problem solving.",
+    topics: ["Python Data Structures", "Functions & Modules", "File Operations", "Problem Solving"]
   },
   {
-    stage: "Interactive Applications",
-    title: "Modern Web Development",
-    status: "Active Building",
-    statusColor: "cyan",
-    description: "Constructing modern responsive web user interfaces using React, Vite, and utility-first Tailwind CSS.",
-    topics: ["React Hooks & Components", "State Management", "Tailwind CSS Layouts", "Responsive Mobile Design"]
-  },
-  {
-    stage: "Future Roadmap",
-    title: "Cloud Computing Fundamentals",
-    status: "Upcoming Goal",
-    statusColor: "violet",
-    description: "Exploring cloud fundamentals, deployment pipelines, virtualized environments, and serverless concepts.",
-    topics: ["Cloud Architecture Basics", "Containerization Concepts", "Deployment & Hosting", "API Integration"]
+    stage: "Interactive Web",
+    title: "Web Development",
+    status: "Active Practice",
+    description: "Constructing responsive web user interfaces using React, Vite, and utility-first Tailwind CSS.",
+    topics: ["React Components & Hooks", "State Management", "Tailwind CSS Layouts", "Responsive Design"]
   }
 ];
 
@@ -247,25 +240,17 @@ export const achievementsData = [
   {
     type: "Participation",
     badge: "Hackathon",
-    title: "Smart India Hackathon (SIH) Participation",
-    organization: "REVA University / SIH",
-    description: "Participated in internal university hackathon ideation and preliminary rounds for Smart India Hackathon, brainstorming technical solutions for real-world civic and technological challenges.",
-    highlights: ["Problem statement analysis", "Team collaboration", "Solution architecture blueprint"]
-  },
-  {
-    type: "Participation",
-    badge: "Competitive Coding",
-    title: "Collegiate Coding Contests & DSA Challenges",
-    organization: "Computer Science & Engineering Department",
-    description: "Actively engaged in department coding challenges and online algorithmic problem-solving contests to strengthen coding speed and debugging under time constraints.",
-    highlights: ["Algorithmic logic testing", "Edge-case handling", "Language fluency in C++ & Java"]
-  },
-  {
-    type: "Participation",
-    badge: "Technical Activities",
-    title: "Technical Workshops & Hands-on Lab Sessions",
+    title: "Smart India Hackathon (SIH) – Internal Ideation & Participation",
     organization: "REVA University",
-    description: "Attended technical workshops covering version control with Git, modern web technologies, and database architecture to complement academic curriculum.",
+    description: "Participated in internal university-level ideation and preliminary preparation rounds for Smart India Hackathon, exploring software problem statements and team brainstorming.",
+    highlights: ["Problem statement analysis", "Team brainstorming", "Initial solution ideation"]
+  },
+  {
+    type: "Participation",
+    badge: "Academic & Technical",
+    title: "Departmental Technical Workshops & Lab Sessions",
+    organization: "REVA University",
+    description: "Participated in university lab practicals and technical workshops covering programming foundations, Git, and database concepts.",
     highlights: ["Hands-on Git/GitHub training", "DBMS laboratory practicals", "Peer code reviews"]
   },
   {
@@ -273,7 +258,7 @@ export const achievementsData = [
     badge: "Academics",
     title: "Continuous 3rd Semester BTech Academic Pursuit",
     organization: "REVA University, Bangalore",
-    description: "Maintaining consistent academic progression across core Computer Science subjects including Data Structures, Object-Oriented Programming, and Discrete Mathematics.",
-    highlights: ["Core CS foundation", "Theory & practical lab synergy", "Consistent lab evaluations"]
+    description: "Maintaining consistent academic progression across core Computer Science subjects including Data Structures, Object-Oriented Programming, and DBMS.",
+    highlights: ["Core CS foundation", "Theory & practical lab synergy", "Regular lab practicals"]
   }
 ];

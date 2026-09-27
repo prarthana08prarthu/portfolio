@@ -133,7 +133,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-between pb-2 border-b border-slate-200/80 dark:border-slate-700/80">
                   <dt className="text-slate-500 dark:text-slate-400">Primary Location</dt>
-                  <dd className="font-semibold text-slate-800 dark:text-slate-200 text-right">Bangalore, Karnataka, IN</dd>
+                  <dd className="font-semibold text-slate-800 dark:text-slate-200 text-right">Bangalore, Karnataka, India</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-slate-500 dark:text-slate-400">Active Learning Goal</dt>
