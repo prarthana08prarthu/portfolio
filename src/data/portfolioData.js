@@ -9,17 +9,11 @@ export const personalInfo = {
   githubUsername: "prarthana08prarthu",
   githubUrl: "https://github.com/prarthana08prarthu",
 
-  // Specific repository URLs
-  helloWorldRepoUrl: "https://github.com/prarthana08prarthu/hello-world", // [Placeholder: Replace with your actual Hello World repository URL if different]
+  // Verified repository URLs
+  helloWorldRepoUrl: "https://github.com/prarthana08prarthu/hello-world",
   leetcodeRepoUrl: "https://github.com/prarthana08prarthu/leetcode-solutions",
-  lineEditorRepoUrl: "https://github.com/prarthana08prarthu/simple-line-editor", // [Placeholder: Replace with your actual Line Editor repository URL if different]
-  portfolioRepoUrl: "https://github.com/prarthana08prarthu/portfolio", // [Placeholder: Replace with your actual portfolio repository URL if different]
-
-  // Contact details clearly labeled for submission rubric
-  email: "[Placeholder: your.email@reva.edu.in]", // [Placeholder - Replace with your actual contact email]
-  isEmailPlaceholder: true,
-  linkedinUrl: "https://linkedin.com/in/[your-linkedin-id]", // [Placeholder - Replace with your actual LinkedIn profile]
-  isLinkedinPlaceholder: true,
+  lineEditorRepoUrl: "https://github.com/prarthana08prarthu/simple-line-editor",
+  portfolioRepoUrl: "https://github.com/prarthana08prarthu/portfolio",
 };
 
 export const educationData = {
@@ -46,7 +40,7 @@ export const skillsData = [
       { name: "C", focus: "Pointers, memory management, file I/O & command-line tools" },
       { name: "C++", focus: "Standard Template Library (STL) & algorithm implementation" },
       { name: "Java", focus: "Object-Oriented Programming principles, classes & inheritance" },
-      { name: "Python", focus: "Basic scripting, problem solving & algorithmic logic" }
+      { name: "Python", focus: "Scripting, problem solving & algorithmic logic" }
     ]
   },
   {
@@ -73,7 +67,7 @@ export const skillsData = [
     category: "Developer Tools & Workflow",
     description: "Essential toolchain used for version control, collaboration, and code editing.",
     skills: [
-      { name: "Git", focus: "Branching, committing & workflow hygiene" },
+      { name: "Git", focus: "Branching, committing & version control workflow" },
       { name: "GitHub", focus: "Remote repositories, commits & code hosting" },
       { name: "GitHub CLI", focus: "Command-line repository and authentication workflow" },
       { name: "VS Code", focus: "Primary IDE & developer extensions ecosystem" },
@@ -90,14 +84,13 @@ export const projectsData = [
     subtitle: "Command-Line Line-Based Text Editor",
     description: "A command-line line editor developed in C that allows users to create, view, insert, delete, and modify text lines using line-based operations.",
     details: [
-      "Line-based text operations: inserting lines, deleting lines, displaying buffer contents, and modifying lines.",
-      "Dynamic memory and pointer management in C for line representation.",
+      "Create, view, insert, delete, and modify text lines using line-based operations.",
+      "Implementation using C programming, pointers, and structured memory management.",
       "File handling routines to load text files and save edited text back to disk."
     ],
     technologies: ["C", "Command Line", "File I/O", "Pointers"],
     githubUrl: personalInfo.lineEditorRepoUrl,
-    githubLabel: "View Repository",
-    isPlaceholderUrl: true,
+    githubLabel: "View Simple Line Editor",
     type: "Systems / CLI Project"
   },
   {
@@ -111,9 +104,8 @@ export const projectsData = [
       "Focus on practicing fundamental data structures and algorithmic thinking."
     ],
     technologies: ["C++", "Java", "Python", "Problem Solving", "Data Structures"],
-    githubUrl: "https://github.com/prarthana08prarthu/leetcode-solutions",
+    githubUrl: personalInfo.leetcodeRepoUrl,
     githubLabel: "View LeetCode Repository",
-    isPlaceholderUrl: false,
     type: "Algorithms & DSA"
   },
   {
@@ -124,28 +116,26 @@ export const projectsData = [
     details: [
       "Initial setup of Git repository and remote repository connection.",
       "Practiced basic Git commands: git init, add, commit, and push.",
-      "Demonstrates foundational repository hygiene and documentation."
+      "Demonstrates foundational repository setup and documentation."
     ],
     technologies: ["Git", "GitHub", "Markdown"],
     githubUrl: personalInfo.helloWorldRepoUrl,
     githubLabel: "View Hello World Repository",
-    isPlaceholderUrl: true,
     type: "Course Artifact"
   },
   {
     id: "portfolio-website",
     title: "Personal Developer Portfolio",
-    subtitle: "React & Tailwind CSS Course Showcase",
-    description: "A responsive developer portfolio built using React, Vite, and Tailwind CSS to showcase projects, technical skills, learning progress, and GitHub work.",
+    subtitle: "React & Tailwind CSS Course Portfolio",
+    description: "A responsive student developer portfolio built using React, Vite, and Tailwind CSS to showcase course activities, technical skills, and GitHub repositories.",
     details: [
-      "Structured using modular, reusable React components.",
-      "Responsive design styled with Tailwind CSS.",
-      "Includes dark/light mode toggle and authentic student documentation."
+      "Built as a student course portfolio using React and Tailwind CSS.",
+      "Structured using modular, reusable React components with dark/light themes.",
+      "Showcases course activities, technical skills, and verified GitHub repositories."
     ],
     technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
     githubUrl: personalInfo.portfolioRepoUrl,
-    githubLabel: "View Portfolio Code",
-    isPlaceholderUrl: true,
+    githubLabel: "View Portfolio Repository",
     type: "Web Development"
   }
 ];
@@ -157,14 +147,15 @@ export const activitiesData = [
     category: "Course Activity 1",
     description: "Developed foundational programming artifacts in C and C++, focusing on line editor implementation, pointers, memory allocation, and command-line operations.",
     skillsLearned: ["C / C++ Basics", "Pointers", "Memory Allocation", "Command-Line File I/O"],
-    evidenceText: "View Line Editor Project",
-    evidenceLink: "#projects"
+    evidenceText: "View Simple Line Editor",
+    evidenceLink: personalInfo.lineEditorRepoUrl,
+    isExternal: true
   },
   {
     activityNumber: "Activity 2",
     title: "Git & GitHub Setup and Version Control",
     category: "Course Activity 2",
-    description: "Configured Git and GitHub workflow, created foundational repositories including the Hello World repository, and practiced regular commits and repository management.",
+    description: "Configured Git and GitHub workflow, created foundational repositories including the Hello World repository, and practiced commits and repository management.",
     skillsLearned: ["Git CLI", "Repository Management", "Commit Practices", "GitHub Setup"],
     evidenceText: "View Hello World Repository",
     evidenceLink: personalInfo.helloWorldRepoUrl,
@@ -186,7 +177,7 @@ export const activitiesData = [
     description: "Consistent problem solving on LeetCode documented through a dedicated GitHub repository, and integrated into this personal portfolio for course evaluation.",
     skillsLearned: ["Problem Solving", "Algorithmic Practice", "GitHub Repository Integration", "Portfolio Documentation"],
     evidenceText: "View LeetCode Repository",
-    evidenceLink: "https://github.com/prarthana08prarthu/leetcode-solutions",
+    evidenceLink: personalInfo.leetcodeRepoUrl,
     isExternal: true
   }
 ];
@@ -248,7 +239,7 @@ export const achievementsData = [
   {
     type: "Participation",
     badge: "Academic & Technical",
-    title: "Departmental Technical Workshops & Lab Sessions",
+    title: "Departmental Technical Workshops & Lab Practical Sessions",
     organization: "REVA University",
     description: "Participated in university lab practicals and technical workshops covering programming foundations, Git, and database concepts.",
     highlights: ["Hands-on Git/GitHub training", "DBMS laboratory practicals", "Peer code reviews"]

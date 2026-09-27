@@ -85,7 +85,7 @@ export default function About() {
                 Rather than treating computer science as mere theoretical coursework, I enjoy turning concepts into working software artifacts. Whether implementing a command-line line editor in C, analyzing algorithmic patterns on LeetCode, or building component-driven interfaces, I actively document my progress and embrace continuous improvement.
               </p>
               <p>
-                I believe that solid fundamentals in Data Structures, Object-Oriented Design, and Database Management form the bedrock of an adaptable software engineer. I am actively seeking opportunities such as hackathons, open collaborative projects, and software internships where I can contribute actively and learn from experienced engineering teams.
+                I believe that solid fundamentals in Data Structures, Object-Oriented Design, and Database Management form the bedrock of an adaptable software engineer. I am focused on developing strong theoretical foundations and practical coding skills through coursework, collaborative academic projects, and continuous problem solving.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
-                <span>Rigorous daily git commit habits</span>
+                <span>Version control practice with Git &amp; GitHub</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />

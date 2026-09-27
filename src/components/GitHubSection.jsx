@@ -88,7 +88,7 @@ export default function GitHubSection() {
             GitHub Profile &amp; Repositories
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Transparent view of code repositories, daily commit workflow, and problem-solving logs on GitHub.
+            Transparent view of course repositories, problem-solving progress, and student project code on GitHub.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function GitHubSection() {
             <div className="flex items-center justify-between mb-3 text-xs">
               <div className="flex items-center gap-2 font-semibold text-slate-800 dark:text-slate-200">
                 <GitBranch className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
-                <span>Repository Commit Activity Overview</span>
+                <span>Repository Activity Overview</span>
               </div>
               <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
                 <span>Less</span>
@@ -163,7 +163,7 @@ export default function GitHubSection() {
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-4 mt-3 text-xs text-slate-500 dark:text-slate-400">
-              <span>Consistent Git discipline across data structures, coursework, and personal projects.</span>
+              <span>Version-controlled course activities and programming repositories.</span>
               <span className="font-mono text-teal-600 dark:text-teal-400 font-medium">github.com/{personalInfo.githubUsername}</span>
             </div>
           </div>

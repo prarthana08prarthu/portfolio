@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Github, Linkedin, MapPin, Send, CheckCircle2, Copy, Check, Info } from 'lucide-react';
+import { Github, MapPin, Send, CheckCircle2, Sparkles, MessageSquare } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
-  const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,83 +13,40 @@ export default function Contact() {
     }
   };
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText(personalInfo.email);
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
   return (
     <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200/80 dark:border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/60 border border-teal-200/80 dark:border-teal-800/80 mb-3">
-            <Mail className="w-3.5 h-3.5" />
+            <MessageSquare className="w-3.5 h-3.5" />
             <span>Connect &amp; Collaborate</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
             Get in Touch
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Feel free to connect for academic discussions, coding collaborations, or technical queries.
+            This portfolio is intended for academic collaboration, technical discussions, and student opportunities. Feel free to connect or send a message.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Contact Cards */}
+          {/* Left Column: Verified Profile & Academic Details */}
           <div className="lg:col-span-5 space-y-4">
             <div className="bg-white dark:bg-slate-800/80 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-slate-700/80 shadow-soft space-y-6">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                Contact Information
+                Contact &amp; Profiles
               </h3>
 
-              {/* Email Item */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                      Email Address
-                    </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200/70 dark:border-amber-800/70">
-                      Placeholder
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 mt-0.5">
-                    <span className="text-sm font-semibold text-slate-900 dark:text-white font-mono truncate">
-                      {personalInfo.email}
-                    </span>
-                    <button
-                      onClick={copyEmail}
-                      title="Copy email address"
-                      className="p-1 rounded text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-                    >
-                      {copiedEmail ? <Check className="w-4 h-4 text-teal-500" /> : <Copy className="w-4 h-4" />}
-                    </button>
-                  </div>
-                  <span className="text-[11px] text-slate-400 dark:text-slate-500 block mt-0.5">
-                    Replace with your verified email in portfolioData.js
-                  </span>
-                </div>
-              </div>
-
-              {/* GitHub Item */}
+              {/* Verified GitHub Profile */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-700/60 text-slate-800 dark:text-slate-200 flex items-center justify-center flex-shrink-0">
                   <Github className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                      GitHub Profile
-                    </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200/70 dark:border-emerald-800/70">
-                      Verified
-                    </span>
-                  </div>
+                  <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block">
+                    Verified GitHub Profile
+                  </span>
                   <a
                     href={personalInfo.githubUrl}
                     target="_blank"
@@ -100,47 +56,19 @@ export default function Contact() {
                     github.com/{personalInfo.githubUsername}
                   </a>
                   <span className="text-[11px] text-slate-400 dark:text-slate-500 block mt-0.5">
-                    Primary coding &amp; coursework repositories
+                    Coursework and project repositories
                   </span>
                 </div>
               </div>
 
-              {/* LinkedIn Item */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center flex-shrink-0">
-                  <Linkedin className="w-5 h-5" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                      LinkedIn Network
-                    </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200/70 dark:border-amber-800/70">
-                      Placeholder
-                    </span>
-                  </div>
-                  <a
-                    href={personalInfo.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 block mt-0.5 truncate"
-                  >
-                    {personalInfo.linkedinUrl}
-                  </a>
-                  <span className="text-[11px] text-slate-400 dark:text-slate-500 block mt-0.5">
-                    Replace with your verified LinkedIn URL in portfolioData.js
-                  </span>
-                </div>
-              </div>
-
-              {/* Location Item */}
+              {/* Location */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block">
-                    Current Location
+                    Location
                   </span>
                   <p className="text-sm font-semibold text-slate-900 dark:text-white mt-0.5">
                     {personalInfo.location}
@@ -153,8 +81,8 @@ export default function Contact() {
             </div>
 
             <div className="p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 text-xs text-slate-600 dark:text-slate-400 flex items-center gap-2.5">
-              <Info className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
-              <span>Open for academic peer learning, technical coursework discussions, and student collaboration.</span>
+              <Sparkles className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+              <span>Intended for academic collaboration, coursework review, and student opportunities.</span>
             </div>
           </div>
 
@@ -164,7 +92,7 @@ export default function Contact() {
               Send a Message
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">
-              Leave your note, inquiry, or collaborative message below.
+              Leave your note, feedback, or collaborative inquiry below.
             </p>
 
             {submitted ? (
@@ -176,7 +104,7 @@ export default function Contact() {
                   Message Prepared Successfully
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
-                  Thank you for reaching out, <strong>{formData.name}</strong>! This client-side form interface is designed for demonstration as part of the portfolio course submission.
+                  Thank you for reaching out, <strong>{formData.name}</strong>! This contact form interface is implemented for demonstration in this student portfolio.
                 </p>
                 <button
                   onClick={() => {
@@ -200,7 +128,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. John Doe / Peer Student"
+                    placeholder="e.g. Peer Student / Evaluator Name"
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder:text-slate-400"
                   />
                 </div>
@@ -215,7 +143,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="e.g. student@reva.edu.in"
+                    placeholder="e.g. name@university.edu"
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder:text-slate-400"
                   />
                 </div>
@@ -230,7 +158,7 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Write your note, feedback, or collaborative inquiry here..."
+                    placeholder="Write your note, feedback, or inquiry here..."
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all placeholder:text-slate-400 resize-none"
                   />
                 </div>

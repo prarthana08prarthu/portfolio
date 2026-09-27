@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, ArrowUp, Code2, Heart } from 'lucide-react';
+import { Github, ArrowUp, Code2 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Footer() {
@@ -37,17 +37,6 @@ export default function Footer() {
               title="GitHub: @prarthana08prarthu"
             >
               <Github className="w-5 h-5" />
-            </a>
-
-            <a
-              href={personalInfo.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-              aria-label="LinkedIn Profile Placeholder"
-              title="LinkedIn Profile Placeholder"
-            >
-              <Linkedin className="w-5 h-5" />
             </a>
 
             <button
